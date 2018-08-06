@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<H1 id="total"></h1>
+<body>
+  <script type="text/javascript">
+    var perHour = 1100;
+    var perSecond = perHour / 60 / 60;
+    var total = 0;
+
+    setInterval(function(){
+      total = total + perSecond;
+      document.getElementById('total').innerHTML = Math.round(total * 100) / 100 + ' рублей.'
+    }, 1000)
+  </script>
+</body>
+</html>
